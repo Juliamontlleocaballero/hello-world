@@ -1,0 +1,36 @@
+// LAura, Marc, Javi, Júlia; ACDC
+color c = color (0);
+float x = 0;
+float y = 0;
+float xspeed= 1 ;
+float yspeed= 1 ;
+
+
+void setup () {
+  size (500, 500);
+}
+
+void draw () {
+  background (255);
+  move ();
+  display ();
+}
+
+void move () {
+  x= x + yspeed;
+  yspeed = yspeed + 1; //
+  if (x > width) { // quan surtis de la finestre, torna al punt inicial de la finestra
+     x = 0;
+  }
+   y= y + yspeed;
+  if (y > width) { // quan surtis de la finestre, torna al punt inicial de la finestra
+     y = 0;
+  }
+  
+
+}
+
+void display () {
+  fill (c);
+  rect (x, y, 60, 30);
+}
